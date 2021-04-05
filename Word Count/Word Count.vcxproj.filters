@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Executable">
+      <UniqueIdentifier>{f3c2b612-a003-4352-bbf7-e4b5505af691}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -26,5 +29,19 @@
     <ClInclude Include="TextFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="output.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Debug\Word Count.exe">
+      <Filter>Executable</Filter>
+    </None>
+    <None Include="..\Debug\Word Count.ilk">
+      <Filter>Executable</Filter>
+    </None>
+    <None Include="..\Debug\Word Count.pdb">
+      <Filter>Executable</Filter>
+    </None>
   </ItemGroup>
 </Project>

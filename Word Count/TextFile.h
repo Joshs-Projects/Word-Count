@@ -47,6 +47,7 @@ public:
 	}
 
 	int getNumberOfWords() {
+		wordCount = 0;
 		for (int i = 0; i < contentsOfFile.size(); i++) {
 			wordCount = wordCount + contentsOfFile[i].size();
 		}
