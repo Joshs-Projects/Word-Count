@@ -5,13 +5,16 @@
 #include <string>
 
 class CSVFile {
-private:
+protected:
 	std::string fileName = "";
 
 	std::vector<std::vector< std::string>> data;
 	
 
 public:
+	//default constructor
+	CSVFile() { }
+
 	CSVFile(std::string newFileName) {
 		fileName = newFileName;
 	}
@@ -58,32 +61,9 @@ public:
 		return 1;
 	}
 
-	std::string getEntry(int row, int column) {
-		return data[row+1][column];
-	}
-
-	int setEntry(int row, int column, std::string entry) {
-		data[row+1][column] = entry;
+	int SetFilename(std::string newFilename) {
+		fileName = newFilename;
 		return 1;
-	}
-
-	int setNewRow(std::vector <std::string> newRow) {
-		data.push_back(newRow);
-		return 1;
-	}
-
-	int getVersion() {
-		return data.size()-1;
-	}
-
-	int getWordCount() {
-		if (getVersion() == 0) {
-			return 0;
-		}
-		else {
-			return stoi(data[getVersion()][2]);
-		}
-		
 	}
 
 };

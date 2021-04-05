@@ -5,19 +5,22 @@
 #include <vector>
 
 class TextFile {
-private:
+protected:
 	std::vector<std::vector<std::string>> contentsOfFile;
 	std::string fileName;
 	int wordCount = 0;
 
 public:
-	TextFile(std::string fileName, int versionNumber) {
-		fileName = fileName + std::to_string(versionNumber) + ".txt";
+	//default constructor
+	TextFile() {  }
+
+	TextFile(std::string fileName) {
+		fileName = fileName + ".txt";
 		wordCount = 0;
 	}
 
-	int SetFileName(std::string newFileName, int versionNumber) {
-		fileName = newFileName + std::to_string(versionNumber) + ".txt";
+	int SetFileName(std::string newFileName) {
+		fileName = newFileName + ".txt";
 		return 1;
 	}
 
@@ -44,14 +47,6 @@ public:
 		}
 		myFile.close();
 		return 1;
-	}
-
-	int getNumberOfWords() {
-		wordCount = 0;
-		for (int i = 0; i < contentsOfFile.size(); i++) {
-			wordCount = wordCount + contentsOfFile[i].size();
-		}
-		return wordCount;
 	}
 
 };

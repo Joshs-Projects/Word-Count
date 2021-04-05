@@ -2,8 +2,10 @@
 #include <fstream>
 #include <string>
 
-#include "CSVFile.h"
-#include "TextFile.h"
+//#include "CSVFile.h"
+#include "Output.h"
+//#include "TextFile.h"
+#include "Document.h"
 
 std::string getCurrentDate() {
 	std::string year, month, day;
@@ -44,12 +46,12 @@ int main() {
 		//Ask the user for the most recent version number to be bale to loop through multiple versions if necessary
 		int currentVersion = getCurrentVersion();
 
-		CSVFile outputCSV = CSVFile("output");
+		Output outputCSV = Output("output");
 		outputCSV.CSVRead();
-		TextFile inputText = TextFile("Draft ", outputCSV.getVersion());
+		Document inputText = Document("Draft ", outputCSV.getVersion());
 		//inputText.ReadTextFile();
 		for (int i = outputCSV.getVersion()+1; i <= currentVersion; i++) {
-			inputText.SetFileName("Draft ", i);
+			inputText.SetTextFilename("Draft ", i);
 			inputText.ReadTextFile();
 			std::cout << "Please enter the date for Draft " + std::to_string(i) << std::endl;
 			outputCSV.setNewRow({ getCurrentDate(), "", std::to_string(inputText.getNumberOfWords()-outputCSV.getWordCount()), std::to_string(inputText.getNumberOfWords()) });
