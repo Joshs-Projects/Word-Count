@@ -148,6 +148,7 @@
     <ClInclude Include="TextFile.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Debug\output.csv" />
     <None Include="..\Debug\Word Count.exe" />
     <None Include="..\Debug\Word Count.ilk" />
     <None Include="..\Debug\Word Count.pdb" />

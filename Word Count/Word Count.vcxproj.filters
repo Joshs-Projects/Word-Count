@@ -49,5 +49,8 @@
     <None Include="..\Debug\Word Count.pdb">
       <Filter>Executable</Filter>
     </None>
+    <None Include="..\Debug\output.csv">
+      <Filter>Executable</Filter>
+    </None>
   </ItemGroup>
 </Project>
