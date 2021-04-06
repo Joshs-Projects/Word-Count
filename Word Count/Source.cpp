@@ -47,10 +47,12 @@ std::tuple<std::string, int> getTarget() {
 int main() {
 	std::string Entry = "";
 	//Edit an entry could take excel grid reference for ease of use
-	std::cout << "1)Update" << std::endl << "2)Get Statistics" << std::endl << "3)How far to target" << std::endl << "QUIT to quit" << std::endl;
-	std::cin >> Entry;
+	
 
-	//while (Entry != "QUIT") {
+	while (Entry != "QUIT") {
+		std::cout << "1)Update" << std::endl << "2)Get Statistics" << std::endl << "3)How far to target" << std::endl << "QUIT to quit" << std::endl;
+		std::cin >> Entry;
+
 		while (Entry != "1" && Entry != "2" && Entry != "3" && Entry != "QUIT") {
 			std::cout << "Please enter either 1, 2 or QUIT" << std::endl;
 			std::cout << "1)Update" << std::endl << "2)Edit an entry" << std::endl << "QUIT to quit" << std::endl;
@@ -95,7 +97,7 @@ int main() {
 
 			averageDayWords = averageDayWords / dateAverage.size();
 
-			std::cout << "On an average day you have " << averageDayWords << "new words." << std::endl;
+			std::cout << "On an average day you have " << averageDayWords << " new words." << std::endl;
 			std::cout << "You've also typed " << outputCSV.getWordCount() << " words " << std::endl;
 			
 		}
@@ -155,13 +157,12 @@ int main() {
 			else {
 				std::cout << "To reach this you have to type " << (std::get<1>(Target) - outputCSV.getWordCount()) / totalDays << " words per day" << std::endl;
 			}
-			
-			
-
 
 		}
 
+		std::cout << std::endl;
 
-	//}
+
+	}
 	return 1;
 }
