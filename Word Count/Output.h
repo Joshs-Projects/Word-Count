@@ -99,4 +99,9 @@ public:
 
 		return dateAverage;
 	}
+
+	std::string getNewestEntryDate() {
+		return data[getVersion()][0];
+	}
+
 };
