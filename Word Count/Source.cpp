@@ -3,10 +3,12 @@
 #include <string>
 #include <tuple>
 
+#include "AllegroDisplay.h"
 //#include "CSVFile.h"
 #include "Output.h"
 //#include "TextFile.h"
 #include "Document.h"
+#include "SubButtons.h"
 
 std::string getCurrentDate() {
 	std::string year, month, day;
@@ -47,9 +49,10 @@ std::tuple<std::string, int> getTarget() {
 int main() {
 	std::string Entry = "";
 	//Edit an entry could take excel grid reference for ease of use
-	
 
-	while (Entry != "QUIT") {
+	CreateDisplay();
+
+	/*while (Entry != "QUIT") {
 		std::cout << "1)Update" << std::endl << "2)Get Statistics" << std::endl << "3)How far to target" << std::endl << "QUIT to quit" << std::endl;
 		std::cin >> Entry;
 
@@ -59,8 +62,20 @@ int main() {
 			std::cin >> Entry;
 		}
 	
-		//Update the output.csv file
 		if (Entry == "1") {
+
+		} 
+		else if (Entry == "2") {
+
+		}
+		else if (Entry == "3") {
+		
+		}
+
+
+
+		//Update the output.csv file
+		/*if (Entry == "1") {
 			//Ask the user for the most recent version number to be bale to loop through multiple versions if necessary
 			int currentVersion = getCurrentVersion();
 
@@ -163,6 +178,6 @@ int main() {
 		std::cout << std::endl;
 
 
-	}
+	}*/
 	return 1;
 }

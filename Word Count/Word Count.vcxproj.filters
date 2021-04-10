@@ -16,6 +16,9 @@
     <Filter Include="Executable">
       <UniqueIdentifier>{f3c2b612-a003-4352-bbf7-e4b5505af691}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Buttons">
+      <UniqueIdentifier>{abb7e5d4-23ce-4a93-ac3d-8ba939eb1694}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -35,6 +38,15 @@
     <ClInclude Include="Document.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AllegroDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="SubButtons.h">
+      <Filter>Header Files\Buttons</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="output.csv">
@@ -52,5 +64,14 @@
     <None Include="..\Debug\output.csv">
       <Filter>Executable</Filter>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="UpdateButtonClicked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UpdateButtonUnclicked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
