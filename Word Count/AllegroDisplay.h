@@ -63,13 +63,9 @@ int CreateDisplay() {
 			bool found = false;
 			int count = 0;
 
-			do {
-				std::get<0>(allButtons);
-				if ((std::get<count>(allButtons)).IfHit()) {
-
-				}
-
-			} while (found == false);
+			if (update.IfHit(mouseX, mouseY)) {
+				update.WhenHit();
+			}
 
 		}
 	}

@@ -52,6 +52,8 @@ int main() {
 
 	CreateDisplay();
 
+	auto currentDate = std::chrono::steady_clock::now();
+
 	/*while (Entry != "QUIT") {
 		std::cout << "1)Update" << std::endl << "2)Get Statistics" << std::endl << "3)How far to target" << std::endl << "QUIT to quit" << std::endl;
 		std::cin >> Entry;

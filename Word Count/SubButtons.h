@@ -1,6 +1,8 @@
 #pragma once
 #include "Button.h"
 
+#include <chrono>
+
 class UpdateButton : public Button {
 public:
 	UpdateButton(int ButtonLocationX, int ButtonLocationY, int ButtonSizeX, int ButtonSizeY, const char* NameOfButton, const char* ClickedButtonName, int ScaledSizeX, int ScaledSizeY) {
@@ -14,6 +16,8 @@ public:
 	}
 
 	int WhenHit() {
+		auto currentDate = std::chrono::steady_clock::now();
+
 		//Ask the user for the most recent version number to be bale to loop through multiple versions if necessary
 		int currentVersion = getCurrentVersion();
 

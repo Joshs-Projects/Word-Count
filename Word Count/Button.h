@@ -89,7 +89,10 @@ public:
 
 	bool IfHit(int MouseX, int MouseY) {
 		if ((MouseX > posX) && (MouseX < (posX + scaledSizeX)) && (MouseY > posY) && (MouseY < posY + scaledSizeY)) {
-			WhenHit();
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 };
